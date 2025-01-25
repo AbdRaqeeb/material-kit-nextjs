@@ -1,0 +1,47 @@
+{
+    "name": "mkr-next",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack -p 3264",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prepare": "husky",
+        "format": "biome format .",
+        "format:fix": "biome format --write .",
+        "lint:biome": "biome lint --error-on-warnings .",
+        "lint:biome:fix": "biome lint --write --no-errors-on-unmatched .",
+        "type:check": "npx tsc --project tsconfig.json --noEmit",
+        "biome:fix": "biome check --write --unsafe --no-errors-on-unmatched",
+        "ci": "biome check --write --no-errors-on-unmatched",
+        "ci:check": "yarn ci && yarn type:check"
+    },
+    "dependencies": {
+        "@emotion/cache": "^11.13.1",
+        "@emotion/react": "^11.13.3",
+        "@emotion/styled": "^11.13.0",
+        "@fontsource-variable/dm-sans": "^5.0.7",
+        "@fontsource/barlow": "^5.0.14",
+        "@iconify/react": "^5.0.2",
+        "@mui/lab": "^5.0.0-alpha.173",
+        "@mui/material": "^5.16.7",
+        "apexcharts": "^3.52.0",
+        "dayjs": "^1.11.13",
+        "next": "15.1.6",
+        "react": "^18.3.1",
+        "react-apexcharts": "^1.4.1",
+        "react-dom": "^18.3.1",
+        "react-toastify": "^11.0.3",
+        "simplebar-react": "^3.2.6"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "@types/node": "^22.5.0",
+        "@types/react": "^18.3.4",
+        "@types/react-dom": "^18.3.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.4.2",
+        "typescript": "^5.5.4"
+    }
+}
